@@ -57,6 +57,7 @@ $datamahasiswa = ambildata($querymahasiswa);
             </td>
         </tr> 
     </table> 
+    <a href=
     <a href="index.php">kembali</a>
     <button type="submit">simpan</button>
 
