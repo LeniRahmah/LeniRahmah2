@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("location:login.html");
+}
 include "koneksi.php";
 
 $query = "SELECT * from prodi";
@@ -21,11 +25,21 @@ include "template/sidebar.php";
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Prodi</li>
                     </ol>
                 </div>
             </div>
-
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+        <!--begin::Container-->
+        <div class="container_fluid">
+            <!--begin::Row-->
+            <!--begin::Row-->
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-4">
@@ -61,11 +75,19 @@ include "template/sidebar.php";
                         <!-- /.card-body -->
 
                     </div>
-                    <!-- /.card -->
 
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->
-
                 <!-- /.col -->
             </div>
+            <!-- /.row (main row) -->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content-->
+</main>
+<!--end::App Main-->
+<?php
+include "template/footer.php"
+?>
